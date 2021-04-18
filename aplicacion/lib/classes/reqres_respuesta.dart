@@ -29,21 +29,21 @@ class ParseResp {
   Support support;
 
   factory ParseResp.fromJson(Map<String, dynamic> json) => ParseResp(
-        page: json["page"],
-        perPage: json["per_page"],
-        total: json["total"],
-        totalPages: json["total_pages"],
-        data: List<Persona>.from(json["data"].map((x) => Persona.fromJson(x))),
-        support: Support.fromJson(json["support"]),
+        page: json['page'],
+        perPage: json['per_page'],
+        total: json['total'],
+        totalPages: json['total_pages'],
+        data: List<Persona>.from(json['data'].map((x) => Persona.fromJson(x))),
+        support: Support.fromJson(json['support']),
       );
 
   Map<String, dynamic> toJson() => {
-        "page": page,
-        "per_page": perPage,
-        "total": total,
-        "total_pages": totalPages,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
-        "support": support.toJson(),
+        'page': page,
+        'per_page': perPage,
+        'total': total,
+        'total_pages': totalPages,
+        'data': List<dynamic>.from(data.map((x) => x.toJson())),
+        'support': support.toJson(),
       };
 }
 
